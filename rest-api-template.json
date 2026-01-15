@@ -1,0 +1,163 @@
+{
+  "info": {
+    "name": "ATK Management API",
+    "description": "API Collection untuk testing Manajemen Inventori ATK",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All ATK Items",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5200/api/atk",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk"]
+        },
+        "description": "Mengambil semua data ATK dari database"
+      },
+      "response": []
+    },
+    {
+      "name": "Create New ATK Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama\": \"Pensil 2B\",\n  \"jenis\": \"Alat Tulis\",\n  \"qty\": 50\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5200/api/atk",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk"]
+        },
+        "description": "Menambahkan item ATK baru ke database"
+      },
+      "response": []
+    },
+    {
+      "name": "Update ATK Item",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama\": \"Pensil 2B Updated\",\n  \"jenis\": \"Alat Tulis\",\n  \"qty\": 75\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5200/api/atk/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk", "1"]
+        },
+        "description": "Update data ATK berdasarkan ID (ubah angka 1 sesuai ID yang ada)"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete ATK Item",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5200/api/atk/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk", "1"]
+        },
+        "description": "Menghapus item ATK berdasarkan ID (ubah angka 1 sesuai ID yang ingin dihapus)"
+      },
+      "response": []
+    },
+    {
+      "name": "Create - Pulpen Biru",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama\": \"Pulpen Biru\",\n  \"jenis\": \"Alat Tulis\",\n  \"qty\": 100\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5200/api/atk",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create - Kertas HVS A4",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama\": \"Kertas HVS A4\",\n  \"jenis\": \"Kertas\",\n  \"qty\": 500\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5200/api/atk",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create - Stapler",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama\": \"Stapler\",\n  \"jenis\": \"Alat Kantor\",\n  \"qty\": 15\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5200/api/atk",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5200",
+          "path": ["api", "atk"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
